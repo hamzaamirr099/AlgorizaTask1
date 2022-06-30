@@ -109,7 +109,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     MyButton(
                       text: "Register",
                       backColor: Colors.blueAccent,
-                      height: 50.0, func: () {  },
+                      height: 50.0, func: () { },
                     ),
                     const SizedBox(height: 15.0,),
                     Row(
