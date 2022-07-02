@@ -19,6 +19,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -32,7 +33,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       onPressed: (){
                         Navigator.pop(context);
                       },
-                      child: Icon(Icons.arrow_back_ios_sharp),
+                      child: const Icon(Icons.arrow_back_ios_sharp),
                       backgroundColor: Colors.black,
                       mini: true,
                     ),
@@ -116,14 +117,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       children: [
                         Expanded(
                           child: Container(
-                            height: 0.8,
+                            height: 0.3,
                             color: Colors.grey,
                           ),
                         ),
                         const Text("  Or  ", style: TextStyle(fontSize: 16.0, color: Colors.grey),),
                         Expanded(
                           child: Container(
-                            height: 0.8,
+                            height: 0.3,
                             color: Colors.grey,
                           ),
                         ),
@@ -133,6 +134,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     Container(
                       width: double.infinity,
                       height: 50.0,
+                      color: Colors.white,
                       child: OutlinedButton(
                         onPressed: () {},
                         child: Row(
@@ -140,11 +142,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           children: [
                             CircleAvatar(
                               child: Image.asset("assets/google_icon.png"),
-                              backgroundColor: Colors.white,
-                              radius: 18.0,
+                              backgroundColor: Colors.white.withOpacity(0.0),
+                              radius: 15.0,
                             ),
 
-                            Text("Sign up with Google",style: TextStyle(fontSize: 16.0),),
+                            const Text("Sign up with Google",style: TextStyle(fontSize: 16.0),),
                           ],
                         ),
                       ),
