@@ -40,7 +40,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ],
               ),
               Padding(
-                padding: EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(20.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -76,9 +76,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     const SizedBox(height: 5.0,),
                     MyTextField(label: "Eg. example@email.com"),
-                    SizedBox(height: 20.0,),
-                    Text("Phone Number"),
-                    SizedBox(height: 5.0,),
+                    const SizedBox(height: 20.0,),
+                    const Text("Phone Number"),
+                    const SizedBox(height: 5.0,),
                     Container(
                       height: 70.0,
                       child: IntlPhoneField(
@@ -113,10 +113,20 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     const SizedBox(height: 15.0,),
                     Row(
-                      children: const [
-                        Spacer(),
-                        Text("Or"),
-                        Spacer(),
+                      children: [
+                        Expanded(
+                          child: Container(
+                            height: 0.8,
+                            color: Colors.grey,
+                          ),
+                        ),
+                        const Text("  Or  ", style: TextStyle(fontSize: 16.0, color: Colors.grey),),
+                        Expanded(
+                          child: Container(
+                            height: 0.8,
+                            color: Colors.grey,
+                          ),
+                        ),
                       ],
                     ),
                     const SizedBox(height: 15.0,),
@@ -125,10 +135,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       height: 50.0,
                       child: OutlinedButton(
                         onPressed: () {},
-                        child: Text("Sign up with Google",style: const TextStyle(fontSize: 16.0),),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            CircleAvatar(
+                              child: Image.asset("assets/google_icon.png"),
+                              backgroundColor: Colors.white,
+                              radius: 18.0,
+                            ),
+
+                            Text("Sign up with Google",style: TextStyle(fontSize: 16.0),),
+                          ],
+                        ),
                       ),
                     ),
-                    SizedBox(height: 20.0,),
+                    const SizedBox(height: 20.0,),
                     Row(
                       children: [
                         Spacer(),
